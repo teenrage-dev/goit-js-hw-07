@@ -33,36 +33,15 @@ function onGalleryBoxClick(e){
             <img src="${e.target.dataset.source}">
         `);
         imagesCreate.show();
+        function onCloseImgEsc(e){
+            if(e.code === 'Escape'){
+                imagesCreate.close();
+                window.removeEventListener("keydown", onCloseImgEsc);
+            }
+        }
+        if(imagesCreate.visible()){
+            return  window.addEventListener("keydown", onCloseImgEsc);
+        }
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const instance = basicLightbox.create(`
-//     <img src="https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg" width="800" height="600">
-// `)
-
-// instance.show()
