@@ -38,19 +38,6 @@ function onGalleryBoxClick(e){
 
 
 
-// function openImg(e){
-// for(let item of items){
-//     e.target
-//     const instance = basicLightbox.create(`
-//         <img src="${item.preview}" width="800" height="600">
-//     `)
-//         console.log(instance.show());
-//     };
-// }
-// console.log(openImg);
-
-
-
 
 
 
