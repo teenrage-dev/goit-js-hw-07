@@ -4,13 +4,13 @@ const galleryBox = document.querySelector(".gallery");
 const galleryMarkup = createGallery(galleryItems);
 
 galleryBox.insertAdjacentHTML("afterbegin", galleryMarkup);
-galleryBox.addEventListener("click", onGalleryBoxClick);
+galleryBox.addEventListener("click", onGalleryBoxClick)
 
 function createGallery(galleryItems) {
     return galleryItems.map(({preview, original, description}) => {
         return `
             <div class="gallery__item">
-                <a href="${original}" class="gallery__link"">
+                <a href="${original}" class="gallery__link" onclick="event.preventDefault()">
                     <img 
                     src="${preview}" 
                     data-source="${original}"
@@ -44,5 +44,4 @@ function onGalleryBoxClick(e){
         }
     }
 }
-
 
